@@ -16,6 +16,14 @@ export default defineConfig({
       shared: ["react", "react-dom", "@apollo/client"],
     }),
   ],
+
+  preview: {
+    host: "0.0.0.0",
+    port: 3001,
+    strictPort: true,
+    allowedHosts: ["auth-mfe.onrender.com"], // ✅ allow your deployed host
+  },
+
   build: {
     modulePreload: false,
     outDir: "dist",
